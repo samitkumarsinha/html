@@ -7,3 +7,8 @@ center div
     transform: translate(-50%,-50%);
 }
 -------------
+vertical text
+.fancy-text{
+    writing-mode: vertical-lr;
+}
+-------------
