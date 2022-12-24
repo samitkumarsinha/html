@@ -68,7 +68,7 @@ disable text selection
 --------------
 animation fade
 .content{
-    animation: fade 2s infinite;
+    animation: fade 2s infinite; //animation: fade 5s linear 2s infinite alternate;
     pointer-events: none;
 }
 @keyframes fade{
