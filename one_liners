@@ -148,3 +148,7 @@ div background blur
     backdrop-filter: blur(5px);
 }
 ------------------------------------------------------
+remove filter from inner div
+ filter: invert(100%);
+ ------------------------------
+ 
