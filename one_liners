@@ -118,5 +118,19 @@ html
 -----------------------------
 apply filter
 filter: blur(4px);
+-----
+apply on image
+filter: grayscale(0.5) opacity(0.8);
 https://css-tricks.com/almanac/properties/b/backdrop-filter/
+blur()
+brightness()
+contrast()
+drop-shadow()
+grayscale()
+hue-rotate()
+invert()
+opacity()
+saturate()
+sepia()
+url() – (for applying SVG filters)
 -----------------------------
