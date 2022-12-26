@@ -102,3 +102,17 @@ html
         </div>
   https://www.w3schools.com/css/tryit.asp?filename=trycss_template1_flexbox
  -----------------------------------------------
+ backdrop (blur background)
+ .box{
+    width: 50%;
+    height: 30%;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    border-radius: 20px;
+    transform: translate(-50%,-50%);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+-----------------------------
