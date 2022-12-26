@@ -116,3 +116,7 @@ html
     background-color: rgba(255, 255, 255, 0.5);
 }
 -----------------------------
+apply filter
+filter: blur(4px);
+https://css-tricks.com/almanac/properties/b/backdrop-filter/
+-----------------------------
