@@ -168,5 +168,10 @@ remove filter from inner div
     background-blend-mode: saturation; //normal|multiply|screen|darken|lighten| color-dodge|saturation|difference|luminosity|overlay
 }
 or 
-
+apply multiplr blend mode
+background: url(...), url(...), linear-gradient(#999, red);
+  background-position: 0 0, 0 10px, 0 0;
+  background-blend-mode: multiply, screen;
+ or applyy filter
+ filter: grayscale();
 --------------------------------
