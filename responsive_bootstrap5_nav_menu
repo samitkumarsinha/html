@@ -41,6 +41,10 @@
 .navbar-nav {
     background: none;
 }
+.navbar-nav li a{
+    float: right;
+    text-align: left;
+}
 .navbar-toggler{
     padding: 0;
 }
