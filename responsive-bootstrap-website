@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="first.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/468135990f.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #nav-bar {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .navbar {
+            background-image: linear-gradient(to right, #a517ba, #5f1782);
+            padding: 0 !important;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            padding-left: 20px;
+        }
+
+        .navbar-nav li {
+            padding: 0 10px;
+        }
+
+        .navbar-nav li a {
+            color: white !important;
+            font-weight: 100;
+            float: right;
+            text-align: left;
+        }
+
+        .fa-bars {
+            color: white;
+            font-size: 30px !important;
+        }
+
+        .navbar-toggler {
+            outline: none !important;
+            border: none !important;
+        }
+
+        .navbar-toggler:focus,
+        .navbar-toggler:active,
+        .navbar-toggler-icon:focus {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        /*************Banner Section*****************/
+        #banner {
+            background-image: linear-gradient(to right, #a517ba, #5f1782);
+            color: #fff;
+            padding-top: 5%;
+        }
+
+        .promo-title {
+            font-size: 40px;
+            font-weight: 600;
+            margin-top: 100px;
+        }
+
+        .play-btn {
+            width: 45px;
+            margin: 20px;
+        }
+
+        #banner a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .bottom-img {
+            width: 100%;
+        }
+
+        /*************Service Section*****************/
+        #services {
+            padding: 80px 0;
+        }
+
+        .service-img {
+            width: 100px;
+            margin-top: 20px;
+        }
+
+        .services {
+            padding: 20px;
+        }
+
+        .services h4 {
+            padding: 5px;
+            margin-top: 25px;
+            text-transform: uppercase;
+        }
+
+        .title::before {
+            content: '';
+            background: #7b1798;
+            height: 5px;
+            width: 200px;
+            margin-right: auto;
+            margin-left: auto;
+            display: block;
+            transform: translateY(63px);
+        }
+
+        .title::after {
+            content: '';
+            background: #7b1798;
+            height: 10px;
+            width: 50px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 40px;
+            display: block;
+            transform: translateY(7.5px);
+        }
+
+        #services .btn-primary {
+            box-shadow: none;
+            padding: 8px 25px;
+            border: none;
+            border-radius: 20px;
+            background-image: linear-gradient(to right, #a517ba, #5f1782);
+        }
+
+        /*************About-us Section*****************/
+        #about-us {
+            background: #f8f9fa;
+            padding-bottom: 50px;
+            padding-top: 50px;
+        }
+
+        .about-title {
+            font-size: 40px;
+            font-weight: 600;
+            margin-top: 8%;
+        }
+
+        #about-us ul {
+            margin-left: 20px;
+        }
+
+        #about-us ul li {
+            margin: 10px 0;
+        }
+
+        /*************Testimonials Section*****************/
+        #testimonials {
+            margin: 100px 0;
+        }
+
+        .testimonials {
+            border-left: 4px solid #7b1798;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .testimonials img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            margin: 0 10px;
+        }
+
+        .user-details {
+            display: inline-block;
+            font-size: 12px;
+        }
+
+        /*************Social media Section*****************/
+        #social-media {
+            background: #f8f9fa;
+            padding: 180px 0;
+        }
+
+        #social-media p {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .social-icons img {
+            width: 60px;
+            transition: 0.5s;
+        }
+
+        .social-icons a:hover img {
+            transform: translateY(-10px);
+        }
+
+        /*************Footer Section*****************/
+        #footer {
+            background-image: linear-gradient(to right, #a517ba, #5f1782);
+            color: #fff;
+        }
+
+        .footer-img {
+            width: 100%;
+        }
+
+        .footer-box {
+            padding: 20px;
+        }
+
+        .footer-box img {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        .footer-box .fa {
+            margin-right: 8px;
+            font-size: 25px;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            padding-top: 7px;
+            border-radius: 2px;
+            background-image: linear-gradient(to right, #a517ba, #5f1782);
+        }
+
+        .footer-box .form-control {
+            box-shadow: none !important;
+            border: none;
+            border-radius: 0;
+            margin-top: 25px;
+            max-width: 250px;
+        }
+
+        .footer-box .btn-primary {
+            box-shadow: none !important;
+            border: none;
+            border-radius: 0;
+            margin-top: 30px;
+            background-image: linear-gradient(to right, #a517ba, #5f1782);
+        }
+
+        hr {
+            background-color: #fff;
+        }
+
+        .copyright {
+            margin-bottom: 0;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        /*************media query*****************/
+        @media screen and (max-width: 400px) {
+            .title::after {
+                transform: translateY(23px);
+            }
+        }
+    </style>
+    <title>Website</title>
+</head>
+
+<body>
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../assets/images/digital/demo-logo.png" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#top">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">SERVICES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about-us">ABOUT US</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testimonials">TESTIMONIALS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#footer">CONTACT US</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!----------------Banner Section------------------------------>
+    <section id="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="promo-title">Best Digital Agency</p>
+                    <p>
+                        Subscribe my channel to watch more videos on
+                        website development, digital marketing, wordpress
+                        and graphics designing
+                    </p>
+                    <a href="#">
+                        <img class="play-btn" src="../assets/images/digital/play.png" />
+                        Watch Tutorials
+                    </a>
+
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="../assets/images/digital/home2.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <img src="../assets/images/digital/wave1.png" class="bottom-img">
+    </section>
+    <!----------------Services Section------------------------------>
+    <section id="services">
+        <div class="container text-center">
+            <h1 class="title">What we do ?</h1>
+            <div class="row text-center">
+                <div class="col-md-4 services">
+                    <img src="../assets/images/digital/service1.png" class="service-img">
+                    <h4>Growth Marketing</h4>
+                    <p>
+                        Subscribe my channel to watch more videos on
+                        website development, digital marketing, wordpress
+                        and graphics designing
+                    </p>
+                </div>
+                <div class="col-md-4 services">
+                    <img src="../assets/images/digital/service2.png" class="service-img">
+                    <h4>Online Branding</h4>
+                    <p>
+                        Subscribe my channel to watch more videos on
+                        website development, digital marketing, wordpress
+                        and graphics designing
+                    </p>
+                </div>
+                <div class="col-md-4 services">
+                    <img src="../assets/images/digital/service3.png" class="service-img">
+                    <h4>Animated Ads</h4>
+                    <p>
+                        Subscribe my channel to watch more videos on
+                        website development, digital marketing, wordpress
+                        and graphics designing
+                    </p>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary">All Services</button>
+        </div>
+    </section>
+    <!----------------About-us Section------------------------------>
+    <section id="about-us">
+        <div class="container">
+            <h1 class="title text-center">Why choose us ?</h1>
+            <div class="row">
+                <div class="col-md-6 about-us">
+                    <p class="about-title">Why we are different ?</p>
+                    <ul>
+                        <li>We believe in doing business honestly</li>
+                        <li>We believe in doing business honestly</li>
+                        <li>We believe in doing business honestly</li>
+                        <li>We believe in doing business honestly</li>
+                        <li>We believe in doing business honestly</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 about-us">
+                    <img src="../assets/images/digital/network.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----------------Testimonials------------------------------>
+    <section id="testimonials">
+        <div class="container">
+            <h1 class="title text-center">What client say ?</h1>
+            <div class="row offset-1">
+                <div class="col-md-5 testimonials">
+                    <p>
+                        Subscribe my channel to watch more videos on
+                        website development, digital marketing, wordpress
+                        and graphics designing
+                    </p>
+                    <img src="../assets/images/digital/user1.jpg">
+                    <p class="user-details"><b>Angelina</b><br>Co-founder at xyz</p>
+                </div>
+                <div class="col-md-5 testimonials">
+                    <p>
+                        Subscribe my channel to watch more videos on
+                        website development, digital marketing, wordpress
+                        and graphics designing
+                    </p>
+                    <img src="../assets/images/digital/user2.jpg">
+                    <p class="user-details"><b>John Doe</b><br>Director at xyz</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----------------Social media------------------------------>
+    <section id="social-media">
+        <div class="container text-center">
+            <p>Find us on social media</p>
+            <div class="social-icons">
+                <a href="#"><img src="../assets/images/digital/facebook-icon.png"></a>
+                <a href="#"><img src="../assets/images/digital/instagram-icon.png"></a>
+                <a href="#"><img src="../assets/images/digital/linkedin-icon.png"></a>
+                <a href="#"><img src="../assets/images/digital/whatsapp-icon.png"></a>
+                <a href="#"><img src="../assets/images/digital/twitter-icon.png"></a>
+                <a href="#"><img src="../assets/images/digital/snapchat-icon.png"></a>
+            </div>
+        </div>
+    </section>
+    <!----------------Footer section------------------------------>
+    <section id="footer">
+        <img src="../assets/images/digital/wave2.png" class="footer-img">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-box">
+                    <img src="../assets/images/digital/demo-logo.png">
+                    <p>
+                        Subscribe my channel to watch more videos on
+                        website development, digital marketing, wordpress
+                        and graphics designing.<br>
+                        Subscribe my channel to watch more videos on
+                        website development
+                    </p>
+                </div>
+                <div class="col-md-4 footer-box">
+                    <p><b>CONTACT US</b></p>
+                    <p><i class="fa fa-location-dot"></i> World Trade Center, Bangalore</p>
+                    <p><i class="fa fa-phone"></i> 9883377710</p>
+                    <p><i class="fa fa-envelope"></i> samitkumarsinha@gmail.com</p>
+                </div>
+                <div class="col-md-4 footer-box">
+                    <p><b>SUBSCRIBE NEWSLETTER</b></p>
+                    <input type="email" class="form-control" placeholder="Your Email">
+                    <button type="button" class="btn btn-primary">Subscribe</button>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">website crafted by samit</p>
+        </div>
+    </section>
+    <!----------------smooth scroll------------------------------>
+    <!-- download zip from https://github.com/cferdinandi/smooth-scroll, unzip and use dist > smooth scroll.js -->
+    <script src="./smooth-scroll.js">
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+</body>
+
+</html>
