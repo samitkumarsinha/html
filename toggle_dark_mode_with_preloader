@@ -59,10 +59,22 @@
         .dark img {
             width: 20px;
         }
+
+        #preloader {
+            background: #000 url(../assets/images/preloader.gif) no-repeat center center;
+            background-size: 10%;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            z-index: 100;
+        }
     </style>
 </head>
 
 <body>
+    <div id="preloader"></div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3nQNiWdeH2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3nQNiWdeH2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <div class="container">
         <div class="box" id="boxbody">
             <div class="dark"><img id="toggle" src="../assets/images/digital/play.png"></div>
@@ -84,7 +96,11 @@
                 btn.src = "../assets/images/digital/whatsapp-icon.png";
             else
                 btn.src = "../assets/images/digital/play.png";
-        }       
+        }
+        let loader = document.getElementById('preloader');
+        window.addEventListener('load', function(){
+            loader.style.display = 'none'
+        }) 
     </script>
 </body>
 
