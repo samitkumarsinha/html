@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+
+        * {
+            box-sizing: inherit;
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        :root {
+            --primary-color: #f4eff0;
+        }
+
+        .dark-theme {
+            --primary-color: #000106;
+        }
+
+        .dark-theme1 {
+            --primary-color: #a4540e;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/images/login-reg-img/banner.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .box {
+            position: absolute;
+            width: 40%;
+            height: 40%;
+            left: 50%;
+            top: 50%;
+            background-color: var(--primary-color);
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+        }
+
+        .dark {
+            background-color: rgb(49, 48, 47);
+            padding: 5px;
+        }
+
+        .dark img {
+            width: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="boxbody">
+            <div class="dark"><img id="toggle" src="../assets/images/digital/play.png"></div>
+        </div>
+    </div>
+    <script>
+        let btn = document.getElementById('toggle')
+        let bdy = document.getElementById('boxbody')
+        count = 0;
+        btn.onclick = function () {
+            count++;
+            if (count % 3 === 0) {
+                bdy.classList.toggle('dark-theme1');
+            } else {
+                bdy.classList.remove('dark-theme1')
+                bdy.classList.toggle('dark-theme'); //document.body.classList.toggle
+            }
+            if (bdy.classList.contains('dark-theme'))
+                btn.src = "../assets/images/digital/whatsapp-icon.png";
+            else
+                btn.src = "../assets/images/digital/play.png";
+        }       
+    </script>
+</body>
+
+</html>
