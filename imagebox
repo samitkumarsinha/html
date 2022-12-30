@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="first.css">
+    <title>Website</title>
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+
+        * {
+            box-sizing: inherit;
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/images/login-reg-img/banner.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .box {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: aliceblue;
+            overflow: hidden;
+        }
+
+        .box img {
+            width: 40px;
+        }
+
+        #imagebox {
+            width: 50%;
+            height: 100%;
+            float: right;
+            background-color: antiquewhite;
+            padding: 10px;
+        }
+
+        #target {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="../assets/images/digital/instagram-icon.png" onmouseover="showimg(this)">
+            <img src="../assets/images/digital/facebook-icon.png" onmouseover="showimg(this)">
+            <img src="../assets/images/digital/twitter-icon.png" onmouseover="showimg(this)">
+            <div id="imagebox">
+                <img id="target">
+            </div>
+        </div>
+    </div>
+    <script>
+        var boximg = document.getElementById('target');
+        function showimg(source) {
+            boximg.src = source.src;
+        }
+    </script>
+</body>
+
+</html>
