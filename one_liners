@@ -174,4 +174,27 @@ background: url(...), url(...), linear-gradient(#999, red);
   background-blend-mode: multiply, screen;
  or applyy filter
  filter: grayscale();
---------------------------------
+---------------------------------------------------------------
+sticky header, footer and content
+nav{
+  position: sticky;
+  top:0;
+  width:100%;
+  z-index: 1000;
+}
+main{
+  position: relative;
+  width: 100%;
+  margin-bottom: 15vh;
+}
+footer{
+  position:fixed;
+  left:0;
+  bottom: 0;
+  width: 100%;
+  height: 15vh;
+  background-color: rgb(78, 75, 75);
+  color: white;
+  text-align: center;
+}
+-----------------------------------------------------------------
