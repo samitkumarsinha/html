@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        *{
+            box-sizing: inherit;
+        }
+        body{
+            position: relative;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            width: 40%;
+            height: 20vh;
+            padding: 20px;
+            background: linear-gradient(lightgray, lightblue);
+            box-shadow: 2px 2px 0px 2px lightslategrey;
+            justify-content: center;
+            align-items: center;
+            /* align-content: center; */
+        }
+        .item{
+            flex-basis: 50%;
+        }
+        input[type="text"]{
+            height: 30px;
+            border: thin solid lightgrey;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label class="item">Username</label>
+        <input class="item" type="text"/>
+        <label class="item">Password</label>
+        <input class="item" type="text"/>
+    </div>
+</body>
+</html>
